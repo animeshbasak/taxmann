@@ -1,275 +1,438 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Taxmann Bookstore</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Taxmann Bookstore</title>
 
-<link rel="stylesheet" href="./style.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="script.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
 
-<script>
-    $(document).ready(function(){
-        // Add minus icon for collapse element which is open by default
-        $(".collapse.show").each(function(){
-        	$(this).prev(".card-header").find(".fa").addClass("fa-minus").removeClass("fa-plus");
+    <script>
+        $(document).ready(function () {
+            // Add minus icon for collapse element which is open by default
+            $(".collapse.show").each(function () {
+                $(this)
+                    .prev(".card-header")
+                    .find(".fa")
+                    .addClass("fa-minus")
+                    .removeClass("fa-plus");
+            });
+
+            // Toggle plus minus icon on show hide of collapse element
+            $(".collapse")
+                .on("show.bs.collapse", function () {
+                    $(this)
+                        .prev(".card-header")
+                        .find(".fa")
+                        .removeClass("fa-plus")
+                        .addClass("fa-minus");
+                })
+                .on("hide.bs.collapse", function () {
+                    $(this)
+                        .prev(".card-header")
+                        .find(".fa")
+                        .removeClass("fa-minus")
+                        .addClass("fa-plus");
+                });
         });
-        
-        // Toggle plus minus icon on show hide of collapse element
-        $(".collapse").on('show.bs.collapse', function(){
-        	$(this).prev(".card-header").find(".fa").removeClass("fa-plus").addClass("fa-minus");
-        }).on('hide.bs.collapse', function(){
-        	$(this).prev(".card-header").find(".fa").removeClass("fa-minus").addClass("fa-plus");
-        });
-    });
-</script>
-
+    </script>
 </head>
+
 <body>
-   <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="logo"><a class="navbar-brand" href="#"><img src="images/logo_Taxmann--Tax-&-CL-of-India-for-Web_Sept18.svg"></a>
-      <p>Bookstore</p>
+    <nav class="navbar navbar-expand-lg navbar-light navbottom">
+        <div class="logo">
+            <a class="navbar-brand" href="#"><img src="images/logo_Taxmann--Tax-&-CL-of-India-for-Web_Sept18.svg" /></a>
+            <p>Bookstore</p>
         </div>
-        <div class=" justify-content-center h-100">
-         <div class="searchbar">
-           <input class="search_input" type="text" name="" placeholder="Search anything on tax and corporate law in bookstore">
-           <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
-         </div>
-        </div>
-      <div class="collapse navbar-collapse navbar nav justify-content-end" id="navbarSupportedContent" >
-         
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link alpha" href="#"><button class="btn alphaB green" type="submit">R</button><span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link alpha" href="#"><button class="btn alphaB pink" type="submit">E</button></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link alpha" href="#"><button class="btn alphaB violet" type="submit">C</button></a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><button class="btn bookstore" type="submit">Bookstore</button></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><img class="bicons" src="images/Notification.svg">
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><img class="bicons" src="images/Profile.svg">
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><img class="bicons" src="images/Cart.svg">
-            </a>
-          </li>
-          
-        </ul>
-        
-      </div>
-    </nav>
-<div class="bs-example content">
-    <div class="accordion" id="accordionExample">
-     
-        <div class="card">
-            <div class="card-header" id="heading jquery-accordion-menu-header">
-                <h4 class="mb-1">
-                   Bookstore Home								
-                </h4>
+        <div class="justify-content-center h-100">
+            <div class="searchbar">
+                <input class="search_input" type="text" name=""
+                    placeholder="Search anything on tax and corporate law in bookstore" />
+                <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
             </div>
         </div>
-        <div class="card">
-         <div class="card-header" id="headingOne">
-             <h2 class="mb-0">
-                 <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"><i class="fa fa-plus"></i>Professional Books</button>									
-             </h2>
-         </div>
-         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-             <div class="card-body">
-               <ul class="submenu">
-                  <li><a href="#">Direct Tax Laws</a></li>
-                  <li><a href="#">International Taxation</a></li>
-                  <li><a href="#">Indirect Tax Laws</a></li>
-                  <li><a href="#">Insolvenct and Bankruptcy Code</a></li>
-                  <li><a href="#">GST</a></li>
-                  <li><a href="#">Accounts and Audit</a></li>
-                  <li><a href="#">Banking & Insurance</a></li>
-                  <li><a href="#">Bare Acts</a></li>
-               </ul>
-             </div>
-         </div>
-     </div>
-        <div class="card">
-            <div class="card-header" id="headingTwo">
-                <h2 class="mb-0">
-                    <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"><i class="fa fa-plus"></i>NISM // IIBF</button>
-                </h2>
-            </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                <div class="card-body">
-                    <p></p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header" id="headingThree">
-                <h2 class="mb-0">
-                    <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"><i class="fa fa-plus"></i>Journals</button>                     
-                </h2>
-            </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                <div class="card-body">
-                    <p></p>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-         <div class="card-header" id="headingFour">
-             <h2 class="mb-0">
-                 <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"><i class="fa fa-plus"></i>Tax Compliance on DVD </button>                     
-             </h2>
-         </div>
-         <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-             <div class="card-body">
-                 <p></p>
-             </div>
-         </div>
-     </div>
-     <div class="card">
-      <div class="card-header" id="headingFive">
-          <h2 class="mb-0">
-              <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive"><i class="fa fa-plus"></i>Taxmann online on DVD</button>                     
-          </h2>
-      </div>
-      <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-          <div class="card-body">
-              <p></p>
-          </div>
-      </div>
-  </div>
-  <div class="card">
-   <div class="card-header" id="headingSix">
-       <h2 class="mb-0">
-           <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix"><i class="fa fa-plus"></i>Taxmann online on Web</button>                     
-       </h2>
-   </div>
-   <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
-       <div class="card-body">
-           <p></p>
-       </div>
-   </div>
-</div>
-<div class="card">
-   <div class="card-header" id="headingSeven">
-       <h2 class="mb-0">
-           <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven"><i class="fa fa-plus"></i>E-Services</button>                     
-       </h2>
-   </div>
-   <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
-       <div class="card-body">
-           <p></p>
-       </div>
-   </div>
-</div>
-<div class="card">
-   <div class="card-header" id="headingEight">
-       <h2 class="mb-0">
-           <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEight"><i class="fa fa-plus"></i>E-Journals</button>                     
-       </h2>
-   </div>
-   <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
-       <div class="card-body">
-           <p></p>
-       </div>
-   </div>
-</div>
-<div class="card">
-    <div class="card-header" id="headingNine">
-        <h2 class="mb-0">
-            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseNine"><i class="fa fa-plus"></i>E-Books</button>                     
-        </h2>
-    </div>
-    <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
-        <div class="card-body">
-            <p></p>
-        </div>
-    </div>
- </div>
- <div class="card">
-    <div class="card-header" id="headingTen">
-        <h2 class="mb-0">
-            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTen"><i class="fa fa-plus"></i>Advance diploma in international taxation</button>                     
-        </h2>
-    </div>
-    <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordionExample">
-        <div class="card-body">
-            <p></p>
-        </div>
-    </div>
- </div>
-<div class="card">
-   <div class="card-header" id="jquery-accordion-menu-footer footer">
-       <h9 class="mb-0">
-          Quick Links								
-       </h9>
-   </div>
-</div>
-<div class="card">
-<div class="card-header" id="FooterOne">
-    <h2 class="mb-0">
-        <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseMNine">Bookman India</button>									
-    </h2>
-</div>
-</div>
-<div class="card">
-   <div class="card-header" id="FooterTwo">
-       <h2 class="mb-0">
-           <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseMTen">Authors</button>									
-       </h2>
-   </div>
-   </div>
-   <div class="card">
-      <div class="card-header" id="FooterThree">
-          <h2 class="mb-0">
-              <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseMEleven"><i class="fa fa-plus"></i>Catalogue</button>									
-          </h2>
-      </div>
-      <div id="collapseMEleven" class="collapse" aria-labelledby="FooterThree" data-parent="#accordionExample">
-          <div class="card-body">
-            <ul class="submenu">
-               <li><a href="#">Text</a></li>
+        <div class="collapse navbar-collapse navbar nav justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link alpha" href="#"><button class="btn alphaB green" type="submit">R</button><span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link alpha" href="#"><button class="btn alphaB pink" type="submit">E</button></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link alpha" href="#"><button class="btn alphaB violet" type="submit">C</button></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><button class="btn bookstore" type="submit">Bookstore</button></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><img class="bicons" src="images/Notification.svg" />
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><img class="bicons" src="images/Profile.svg" />
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><img class="bicons" src="images/Cart.svg" />
+                    </a>
+                </li>
             </ul>
-          </div>
-      </div>
-      </div>
-      <div class="card">
-         <div class="card-header" id="FooterFour">
-             <h2 class="mb-0">
-                 <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseTwelve">Dealers</button>									
-             </h2>
-         </div>
-         </div>
+        </div>
+    </nav>
+    <div class="bs-example content">
+        <div class="accordion" id="accordionExample">
+            <div class="card">
+                <div class="card-header cardhead" id="heading jquery-accordion-menu-header">
+                    <h6 class="mb-1">Bookstore Home</h6>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne">
+                            <i class="fa fa-plus"></i><span>Professional Books</span>
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                    data-parent="#accordionExample">
+                    <div class="card-body">
+                        <ul class="submenu">
+                            <li><a href="#">Direct Tax Laws</a></li>
+                            <li><a href="#">International Taxation</a></li>
+                            <li><a href="#">Indirect Tax Laws</a></li>
+                            <li><a href="#">Insolvenct and Bankruptcy Code</a></li>
+                            <li><a href="#">GST</a></li>
+                            <li><a href="#">Accounts and Audit</a></li>
+                            <li><a href="#">Banking & Insurance</a></li>
+                            <li><a href="#">Bare Acts</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button type="button" class="btn btn-link collapsed" data-toggle="collapse"
+                            data-target="#collapseTwo">
+                            <i class="fa fa-plus"></i>NISM // IIBF
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                        <button type="button" class="btn btn-link collapsed" data-toggle="collapse"
+                            data-target="#collapseThree">
+                            <i class="fa fa-plus"></i>Journals
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFour">
+                    <h5 class="mb-0">
+                        <button type="button" class="btn btn-link collapsed" data-toggle="collapse"
+                            data-target="#collapseFour">
+                            <i class="fa fa-plus"></i>Tax Compliance on DVD
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFive">
+                    <h5 class="mb-0">
+                        <button type="button" class="btn btn-link collapsed" data-toggle="collapse"
+                            data-target="#collapseFive">
+                            <i class="fa fa-plus"></i>Taxmann online on DVD
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingSix">
+                    <h5 class="mb-0">
+                        <button type="button" class="btn btn-link collapsed" data-toggle="collapse"
+                            data-target="#collapseSix">
+                            <i class="fa fa-plus"></i>Taxmann online on Web
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingSeven">
+                    <h5 class="mb-0">
+                        <button type="button" class="btn btn-link collapsed" data-toggle="collapse"
+                            data-target="#collapseSeven">
+                            <i class="fa fa-plus"></i>E-Services
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingEight">
+                    <h5 class="mb-0">
+                        <button type="button" class="btn btn-link collapsed" data-toggle="collapse"
+                            data-target="#collapseEight">
+                            <i class="fa fa-plus"></i>E-Journals
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingNine">
+                    <h5 class="mb-0">
+                        <button type="button" class="btn btn-link collapsed" data-toggle="collapse"
+                            data-target="#collapseNine">
+                            <i class="fa fa-plus"></i>E-Books
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="jquery-accordion-menu-footer footer">
+                    <h9 class="mb-0"> Quick Links </h9>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="FooterOne">
+                    <h5 class="mb-0">
+                        <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseMNine">
+                            Bookman India
+                        </button>
+                    </h5>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="FooterTwo">
+                    <h5 class="mb-0">
+                        <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseMTen">
+                            Authors
+                        </button>
+                    </h5>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="FooterThree">
+                    <h5 class="mb-0">
+                        <button type="button" class="btn btn-link" data-toggle="collapse"
+                            data-target="#collapseMEleven">
+                            <i class="fa fa-plus"></i>Catalogue
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseMEleven" class="collapse" aria-labelledby="FooterThree"
+                    data-parent="#accordionExample">
+                    <div class="card-body">
+                        <ul class="submenu">
+                            <li><a href="#">Text</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="FooterFour">
+                    <h5 class="mb-0">
+                        <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseTwelve">
+                            Dealers
+                        </button>
+                    </h5>
+                </div>
+            </div>
+        </div>
     </div>
-    
+    <!--Footer-->
+    <footer class="mainfooter" role="contentinfo">
+        <div class="footer-top p-y-2">
+            <div class="container-fluid"></div>
+        </div>
+        <div class="footer-middle">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <!--Column1-->
+                        <div class="footer-pad">
+                            <p><img src="images/logo_Taxmann--Tax-&-CL-of-India-for-Web_Sept18 (1).svg"></p>
+                            <br>
+                            <address>
+                                <ul class="list-unstyled">
+                                    <li>
+                                        Everything you need on Income Tax,
+                                        GST and Corporate Laws,Authentic
+                                        databases,books, journals, Practice
+                                        and Exam platforms
+                                    </li>
+                                    <br>
+                                    <li>
+                                        <img class="social" src="./images/google-play-badge (1).png" alt="">
+                                        <img class="social" src="./images/app-store.png" alt="">
+                                    </li>
+                                    <br>
+                                    <li>
+                                        <img class="social" src="./images/Facebook.svg" alt="">
+                                        <img class="social" src="images/Twitter.svg" alt="">
+                                        <img class="social" src="images/Linkedin.svg" alt="">
+                                        <img class="social" src="images/Combined Shape.svg" alt="">
+                                    </li>
+                                    <br>
+                                    <li> &#169; 2019 Taxmann.com. All rights reserved. </li>
+                                </ul>
+                            </address>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-6">
+                        <!--Column1-->
+                        <div class="footer-pad">
+                            <p>Products</p>
+                            <ul class="list-unstyled">
+                                <li><a href="#">Research</a></li>
+                                <li><a href="#">Practice</a></li>
+                                <li><a href="#">Exam</a></li>
+                                <li><a href="#">Compliance</a></li>
+                                <li><a href="#">Taxmann Bookstore</a></li>
+                                <li><a href="#">Taxmann Blog</a></li>
+                            </ul>
+                            <p>About Company</p>
+                            <ul class="list-unstyled">
+                                <li><a href="#">History</a></li>
+                                <li><a href="#">Board of Directors</a></li>
+                                <li><a href="#">Media Coverage</a></li>
+                                <li><a href="#">Taxmann Education(CSR)</a></li>
+                                <li><a href="#">Careers</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-6">
+                        <!--Column1-->
+                        <div class="footer-pad">
+                            <p>Catalogue</p>
+                            <ul class="list-unstyled">
+                                <li><a href="#">Acadamic</a></li>
+                                <li><a href="#">Professional</a></li>
+                                <li><a href="#">Bare Acts</a></li>
+                                <li><a href="#">Banking & Finance</a></li>
+                                <li><a href="#">NISM Certification Courses</a></li>
+                                <li><a href="#">One Solution TDS & TSR</a></li>
+                                <li><a href="#">Goods & Services Tax(GST)</a></li>
+                                <li><a href="#">LL.B. Series</a></li>
+                                <li><a href="#">Insolvency and Bankruptcy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-6">
+                        <!--Column1-->
+                        <div class="footer-pad">
+                            <p>Authors</p>
+                            <ul class="list-unstyled">
+                                <li><a href="#">Academic</a></li>
+                                <li><a href="#">Professional</a></li>
+                                <li><a href="#">A - Z</a></li>
+                            </ul>
+                            <p>Bookstore Support</p>
+                            <ul class="list-unstyled">
+                                <li><a href="#">Quick Delivery with Fedex</a></li>
+                                <li><a href="#">Secured Payment</li>
+                                <li><a href="#">Free shipping above Rs.350</a></li>
+                                <li><a href="#">Missed call support @4556 2222</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-6">
+                        <!--Column1-->
+                        <div class="footer-pad">
+                            <p>Business & Support</p>
+                            <ul class="list-unstyled">
+                                <li><a href="#">Sell with Taxmann</a></li>
+                                <li><a href="#">Locate Dealers</a></li>
+                                <li><a href="#">Locate Representatives</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                            <p>Legal</p>
+                            <ul class="list-unstyled">
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Return Policy</li>
+                                <li><a href="#">Payment Terms</a></li>
+                                <li><a href="#">Disclaimer</a></li>
+                                <li><a href="#">EULA</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <!--Footer Bottom-->
 
-</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
-
-
