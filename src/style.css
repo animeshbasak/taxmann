@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -9,7 +10,6 @@ body {
   background: #f7f7f7;
   text-decoration-color: black;
   font-family: "Open Sans", sans-serif;
- 
 }
 
 .content {
@@ -24,10 +24,8 @@ body {
 }
 
 h5 {
-  color:  black !important;;
+  color: black !important;
 }
-
-
 
 .jquery-accordion-menu,
 .jquery-accordion-menu * {
@@ -57,7 +55,7 @@ h5 {
 
 .accordion .fa {
   margin-right: 0.5rem;
-  color: rgb(240, 122, 25) ;
+  color: rgb(240, 122, 25);
 }
 
 .accordion {
@@ -91,14 +89,14 @@ h5 {
   transition: width 0.4s linear;
 }
 
-.searchbar>.search_input {
+.searchbar > .search_input {
   padding: 0 10px;
   width: 450px;
-  caret-color: rgb(240, 122, 25) ;
+  caret-color: rgb(240, 122, 25);
   transition: width 0.4s linear;
 }
 
-.searchbar>.search_icon {
+.searchbar > .search_icon {
   background: whitesmoke;
   color: #e74c3c;
 }
@@ -119,48 +117,51 @@ h5 {
   background: white;
   border: 0px !important;
   border-bottom: 1px solid whitesmoke !important;
-  
 }
 
 .card-header {
   background: white !important;
   font-family: "Open Sans", sans-serif;
- font-size: 12px;
+  font-size: 12px;
 }
-.mb-1{
-  color: black !important;  
+
+.mb-1 {
+  color: black !important;
   text-decoration: none !important;
   font-family: "Open Sans", sans-serif;
- font-size: 14px;
+  font-size: 14px;
 }
-.cardhead{
+
+.cardhead {
   background-color: rgb(250, 203, 186) !important;
 }
-.card-header>h5>button {
+
+.card-header > h5 > button {
   color: black !important;
   text-decoration: none !important;
   font-family: "Open Sans", sans-serif;
- font-size: 12px;
+  font-size: 12px;
 }
 
-.card-body>ul {
+.card-body > ul {
   list-style-type: none;
   font-family: "Open Sans", sans-serif;
- font-size: 12px;
+  font-size: 12px;
 }
 
-.card-body>ul>li>a {
+.card-body > ul > li > a {
   color: black !important;
   text-decoration: none !important;
   font-family: "Open Sans", sans-serif;
-  font-size: 12px
+  font-size: 12px;
 }
-.collapse>div>ul>li{
+
+.collapse > div > ul > li {
   margin-bottom: 1.45em;
 }
-.navbar-light .navbar-brand {
-  color: rgba(0, 0, 0, .9);
 
+.navbar-light .navbar-brand {
+  color: rgba(0, 0, 0, 0.9);
 }
 
 .logo {
@@ -224,9 +225,8 @@ h5 {
   /* display: none !important; */
   height: 40px;
   margin-top: 10px;
-  color: orangered
+  color: orangered;
 }
-
 
 footer {
   color: white;
@@ -237,26 +237,27 @@ footer a {
 }
 
 footer a:hover {
-  color:rgb(240, 122, 25) ;
+  color: rgb(240, 122, 25);
 }
 
 .footer-bottom {
   background: whitesmoke;
   padding: 2em;
-  color: rgba(8, 6, 6, 0.137)
+  color: rgba(8, 6, 6, 0.137);
 }
 
 .footer-top {
   background: whitesmoke;
   margin-bottom: 10px;
 }
-.footer-pad>p{
+
+.footer-pad > p {
   font-size: 12px;
   color: black;
   margin-top: 0.75em;
   font-weight: 500;
-  
 }
+
 .footer-middle {
   background: whitesmoke;
   padding-top: 4em;
@@ -297,9 +298,10 @@ footer a:hover {
 }
 
 .list-unstyled {
-  font-size: 11.5px
+  font-size: 11.5px;
 }
-.list-unstyled>li {
+
+.list-unstyled > li {
   margin-bottom: 0.75em;
   margin-right: 0.5em;
 }
